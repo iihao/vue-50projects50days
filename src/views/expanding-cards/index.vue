@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import {ref} from "vue";
 
 const backgroundList = ref([
@@ -24,7 +24,7 @@ const backgroundList = ref([
   },
 ])
 const currentIndex = ref(0)
-const handleClick = (index) => {
+const handleClick = (index: number) => {
   currentIndex.value = index
 }
 </script>
