@@ -2,7 +2,7 @@
 import {ref} from "vue";
 
 const demoList = ref([
-  {id: 1, name: 'expanding-cards', bgImage: '', url: ''},
+  {id: 1, name: 'expanding-cards', bgImage: '', url: '/expanding-cards'},
   {id: 2, name: 'expanding-cards', bgImage: ''},
   {id: 3, name: 'expanding-cards', bgImage: ''},
   {id: 4, name: 'expanding-cards', bgImage: ''},
@@ -18,14 +18,15 @@ const demoList = ref([
     <div class="main">
       <ul>
         <li v-for="item in demoList" :key="item.id">
-          <a>
+          <router-link :to="{name:item.name}" tag="a" target="_blank">
             <div class="bgImage">
               {{ item.bgImage }}
             </div>
             <div class="title">
               {{ item.name }}
             </div>
-          </a></li>
+          </router-link>
+        </li>
       </ul>
     </div>
   </div>
@@ -78,11 +79,11 @@ ul li .bgImage {
   position: relative;
   background: linear-gradient(-45deg, #fff, #e9f0ff);
   box-shadow: 14px 14px 15px 0 rgb(166 180 211 / 20%);
-  transition: all .2s;
+  transition: all .4s;
 }
 
 ul li:hover .bgImage {
-  transition: all .4s;
+  transition: all .6s;
   background: #111;
   box-shadow: 14px 14px 15px 0 rgb(166 180 211 / 20%);
 }
@@ -97,7 +98,7 @@ ul li .title {
   height: 60px;
   line-height: 60px;
   background-color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   padding: 0 10px;
   border-radius: 0 0 10px 10px;
 }

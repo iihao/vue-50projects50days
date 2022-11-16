@@ -29,18 +29,30 @@ const handleClick = (index: number) => {
 }
 </script>
 <template>
-  <div class="container">
-    <div v-for="(item,index) in backgroundList" :key="index" :class="currentIndex === index ? 'active':''"
-         :style="{backgroundImage: `url(${item.url})`}"
-         class="panel"
-         @click="handleClick(index)">
-      <h3>{{ item.name }}</h3>
+  <div id="page" class="page">
+    <div class="container">
+      <div v-for="(item,index) in backgroundList" :key="index" :class="currentIndex === index ? 'active':''"
+           :style="{backgroundImage: `url(${item.url})`}"
+           class="panel"
+           @click="handleClick(index)">
+        <h3>{{ item.name }}</h3>
+      </div>
     </div>
   </div>
 </template>
 <style scoped>
 * {
   box-sizing: border-box;
+}
+
+#page {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
 }
 
 .container {
