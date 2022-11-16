@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5387402",
+      "name": "仓库",
+      "font_class": "cangku",
+      "unicode": "eac9",
+      "unicode_decimal": 60105
+    },
+    {
+      "icon_id": "5387521",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "eaf1",
+      "unicode_decimal": 60145
+    },
+    {
+      "icon_id": "5387522",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "eaf2",
+      "unicode_decimal": 60146
+    },
+    {
+      "icon_id": "5387650",
+      "name": "个人头像",
+      "font_class": "gerentouxiang",
+      "unicode": "eb24",
+      "unicode_decimal": 60196
+    },
+    {
+      "icon_id": "5387731",
+      "name": "邮件",
+      "font_class": "youjian",
+      "unicode": "eb44",
+      "unicode_decimal": 60228
+    }
+  ]
+}
