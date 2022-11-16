@@ -11,6 +11,21 @@ const routes = [
         path: '/rotating-nav-animation',
         component: () => import('../views/rotating-nav-animation/index.vue')
     },
+    {
+        name: 'hidden-search',
+        path: '/hidden-search',
+        component: () => import('../views/hidden-search/index.vue')
+    },
+    {
+        name: 'blurry-loading',
+        path: '/blurry-loading',
+        component: () => import('../views/blurry-loading/index.vue')
+    },
+    {
+        name: 'scroll-animation',
+        path: '/scroll-animation',
+        component: () => import('../views/scroll-animation/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例

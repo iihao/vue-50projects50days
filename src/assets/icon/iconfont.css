@@ -1,14 +1,23 @@
 @font-face {
-    font-family: "iconfont"; /* Project id  */
-    src: url('iconfont.ttf?t=1668562997440') format('truetype');
+    font-family: "iconfont"; /* Project id 3774658 */
+    src: url('//at.alicdn.com/t/c/font_3774658_bnby119fqs.woff2?t=1668586380793') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3774658_bnby119fqs.woff?t=1668586380793') format('woff'),
+    url('//at.alicdn.com/t/c/font_3774658_bnby119fqs.ttf?t=1668586380793') format('truetype');
 }
 
 .iconfont {
     font-family: "iconfont" !important;
-    font-size: 28px;
+    font-size: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icserch:before {
+    content: "\e672";
 }
 
 .icon-cangku:before {
@@ -30,4 +39,3 @@
 .icon-youjian:before {
     content: "\eb44";
 }
-

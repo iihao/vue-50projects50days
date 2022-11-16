@@ -3,15 +3,17 @@ import {ref} from "vue";
 
 const demoList = ref([
   {id: 1, name: 'expanding-cards', bgImage: '', url: '/expanding-cards'},
-  {id: 2, name: 'expanding-cards', bgImage: ''},
-  {id: 3, name: 'expanding-cards', bgImage: ''},
-  {id: 4, name: 'expanding-cards', bgImage: ''},
-  {id: 5, name: 'expanding-cards', bgImage: ''},
-  {id: 6, name: 'expanding-cards', bgImage: ''},
-  {id: 7, name: 'expanding-cards', bgImage: ''},
-  {id: 8, name: 'expanding-cards', bgImage: ''},
-  {id: 9, name: 'expanding-cards', bgImage: ''},
+  {id: 2, name: 'progress-steps', bgImage: ''},
+  {id: 3, name: 'rotating-nav-animation', bgImage: 'rotating-nav-animation.png'},
+  {id: 4, name: 'hidden-search', bgImage: ''},
+  {id: 5, name: 'blurry-loading', bgImage: ''},
+  {id: 6, name: 'scroll-animation', bgImage: ''},
+  // {id: 7, name: 'split-landing-page', bgImage: ''},
+  // {id: 8, name: 'form-input-wave', bgImage: ''},
+  // {id: 9, name: 'sound-board', bgImage: ''},
+  // {id: 10, name: 'dad-jokes', bgImage: ''},
 ])
+
 </script>
 <template>
   <div id="page" class="page">
@@ -20,7 +22,7 @@ const demoList = ref([
         <li v-for="item in demoList" :key="item.id">
           <router-link :to="{name:item.name}" tag="a" target="_blank">
             <div class="bgImage">
-              {{ item.bgImage }}
+              <span class="day">{{ `Day ${item.id}` }}</span>
             </div>
             <div class="title">
               {{ item.name }}
@@ -79,11 +81,24 @@ ul li .bgImage {
   position: relative;
   background: linear-gradient(-45deg, #fff, #e9f0ff);
   box-shadow: 14px 14px 15px 0 rgb(166 180 211 / 20%);
-  transition: all .4s;
+  transition: all .3s;
+}
+
+ul li .bgImage .day {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  background: #00bfff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
 }
 
 ul li:hover .bgImage {
-  transition: all .6s;
+  transition: all .2s;
   background: #111;
   box-shadow: 14px 14px 15px 0 rgb(166 180 211 / 20%);
 }

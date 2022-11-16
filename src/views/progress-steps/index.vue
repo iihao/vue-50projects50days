@@ -34,18 +34,20 @@ const update = () => {
 
 </script>
 <template>
-  <div class="container">
-    <div class="progress-container">
-      <div id="progress" :style="{ width: progressWidth }" class="progress"></div>
-      <div v-for="(item) in circles" :key="item" :class="currentActive>=item?'active':''" class="circle">
-        {{
-          item
-        }}
+  <div id="page" class="page">
+    <div class="container">
+      <div class="progress-container">
+        <div id="progress" :style="{ width: progressWidth }" class="progress"></div>
+        <div v-for="(item) in circles" :key="item" :class="currentActive>=item?'active':''" class="circle">
+          {{
+            item
+          }}
+        </div>
       </div>
-    </div>
 
-    <button id="prev" :disabled="prevDisabled" class="btn" @click="prevClick">Prev</button>
-    <button id="next" :disabled="nextDisabled" class="btn" @click="nextClick">Next</button>
+      <button id="prev" :disabled="prevDisabled" class="btn" @click="prevClick">Prev</button>
+      <button id="next" :disabled="nextDisabled" class="btn" @click="nextClick">Next</button>
+    </div>
   </div>
 </template>
 
@@ -56,6 +58,16 @@ const update = () => {
   box-sizing: border-box;
   --line-border-fill: #3498db;
   --line-border-empty: #c1c1c1;
+}
+
+#page {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
 }
 
 .container {
