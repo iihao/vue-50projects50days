@@ -21,8 +21,8 @@ blockquote, body, button, dd, dl, fieldset, figure, form, h1, h2, h3, h4, h5, h6
 }
 
 a {
-    font-weight: 500;
-    color: #000000;
+    font-weight: bold;
+    color: #525252;
     text-decoration: inherit;
 }
 
