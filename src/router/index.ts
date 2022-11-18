@@ -45,6 +45,11 @@ const routes = [
         path: '/sound-board',
         component: () => import('../views/sound-board/index.vue')
     },
+    {
+        name: 'dad-jokes',
+        path: '/dad-jokes',
+        component: () => import('../views/dad-jokes/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例

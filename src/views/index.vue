@@ -14,7 +14,7 @@ const demoList = ref([
   {id: 7, name: 'split-landing-page', bgImage: ''},
   {id: 8, name: 'form-input-wave', bgImage: ''},
   {id: 9, name: 'sound-board', bgImage: ''},
-  // {id: 10, name: 'dad-jokes', bgImage: ''},
+  {id: 10, name: 'dad-jokes', bgImage: ''},
 ])
 console.log(getAssets('img/expanding-cards.png'))
 </script>
