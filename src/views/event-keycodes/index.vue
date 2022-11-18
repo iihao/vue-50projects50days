@@ -50,9 +50,9 @@ onMounted(() => {
 }
 
 .key {
-  border: 1px solid #999999;
+  border-radius: 12px;
   background-color: #2B2B2B;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 4px 2px rgb(236 236 236 / 10%);
   display: inline-flex;
   align-items: center;
   font-size: 20px;
@@ -67,7 +67,7 @@ onMounted(() => {
 
 .key small {
   position: absolute;
-  top: -24px;
+  top: -30px;
   left: 0;
   text-align: center;
   width: 100%;
