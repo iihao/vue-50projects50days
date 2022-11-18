@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {computed, onMounted, ref} from "vue";
+import {computed, onMounted, ref} from "vue"
 
 let load = ref(0)
 const loading = () => {

@@ -7,7 +7,6 @@ const handleClick = () => {
   getInput.value.focus()
 }
 const getInput = ref()
-
 </script>
 
 <template>

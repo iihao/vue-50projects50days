@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 import {ref} from "vue";
+import {getAssetsImages} from "../utils/getAssetsImages";
+
 
 const img = ref('https://s1.ax1x.com/2022/11/17/zeOwZ9.jpg')
 const demoList = ref([
-  {id: 1, name: 'expanding-cards', bgImage: 'https://s1.ax1x.com/2022/11/17/zecS8x.jpg'},
-  {id: 2, name: 'progress-steps', bgImage: 'https://s1.ax1x.com/2022/11/17/zeXdl8.png'},
+  {id: 1, name: 'expanding-cards', bgImage: 'expanding-cards.png'},
+  {id: 2, name: 'progress-steps', bgImage: 'progress-steps.png'},
   {id: 3, name: 'rotating-nav-animation', bgImage: 'rotating-nav-animation.png'},
   {id: 4, name: 'hidden-search', bgImage: ''},
   {id: 5, name: 'blurry-loading', bgImage: ''},
@@ -14,7 +16,7 @@ const demoList = ref([
   // {id: 9, name: 'sound-board', bgImage: ''},
   // {id: 10, name: 'dad-jokes', bgImage: ''},
 ])
-
+console.log(getAssetsImages('rotating-nav-animation.png'))
 </script>
 <template>
   <div id="page" class="page">
@@ -23,7 +25,8 @@ const demoList = ref([
         <li v-for="item in demoList" :key="item.id">
           <router-link :to="{name:item.name}" tag="a" target="_blank">
             <div class="bgImage">
-              <img :src="item.bgImage || img" alt=""/>
+              <img :src="getAssetsImages(item.bgImage) || img" alt=""/>
+
               <span class="day">{{ `Day ${item.id}` }}</span>
             </div>
             <div class="title">
