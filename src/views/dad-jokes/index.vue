@@ -65,10 +65,12 @@ h3 {
 
 .joke {
   font-size: 30px;
+  font-weight: bold;
   letter-spacing: 1px;
   line-height: 40px;
   margin: 50px auto;
   max-width: 600px;
+  min-height: 30vh;
 }
 
 .btn {
