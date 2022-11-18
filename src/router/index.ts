@@ -50,6 +50,11 @@ const routes = [
         path: '/dad-jokes',
         component: () => import('../views/dad-jokes/index.vue')
     },
+    {
+        name: 'event-keycodes',
+        path: '/event-keycodes',
+        component: () => import('../views/event-keycodes/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
