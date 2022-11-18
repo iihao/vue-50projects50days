@@ -11,7 +11,7 @@ const demoList = ref([
   {id: 4, name: 'hidden-search', bgImage: ''},
   {id: 5, name: 'blurry-loading', bgImage: ''},
   {id: 6, name: 'scroll-animation', bgImage: ''},
-  // {id: 7, name: 'split-landing-page', bgImage: ''},
+  {id: 7, name: 'split-landing-page', bgImage: ''},
   // {id: 8, name: 'form-input-wave', bgImage: ''},
   // {id: 9, name: 'sound-board', bgImage: ''},
   // {id: 10, name: 'dad-jokes', bgImage: ''},

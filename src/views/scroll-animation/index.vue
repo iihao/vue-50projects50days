@@ -42,7 +42,7 @@ onBeforeUnmount(() => {
 }
 
 #page {
-
+  background: antiquewhite;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;

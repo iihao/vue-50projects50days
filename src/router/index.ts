@@ -4,7 +4,11 @@ import {createRouter, createWebHashHistory} from 'vue-router'
 
 const routes = [
     {name: 'index', path: '/', component: () => import('../views/index.vue')},
-    {name: 'expanding-cards', path: '/expanding-cards', component: () => import('../views/expanding-cards/index.vue')},
+    {
+        name: 'expanding-cards',
+        path: '/expanding-cards',
+        component: () => import('../views/expanding-cards/index.vue')
+    },
     {name: 'progress-steps', path: '/progress-steps', component: () => import('../views/progress-steps/index.vue')},
     {
         name: 'rotating-nav-animation',
@@ -25,6 +29,11 @@ const routes = [
         name: 'scroll-animation',
         path: '/scroll-animation',
         component: () => import('../views/scroll-animation/index.vue')
+    },
+    {
+        name: 'split-landing-page',
+        path: '/split-landing-page',
+        component: () => import('../views/split-landing-page/index.vue')
     },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
