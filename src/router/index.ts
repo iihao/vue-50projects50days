@@ -35,6 +35,11 @@ const routes = [
         path: '/split-landing-page',
         component: () => import('../views/split-landing-page/index.vue')
     },
+    {
+        name: 'form-input-wave',
+        path: '/form-input-wave',
+        component: () => import('../views/form-input-wave/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
