@@ -1,22 +1,22 @@
 <script lang="ts" setup>
 import {ref} from "vue";
-import {getAssetsImages} from "../utils/getAssetsImages";
+import {getAssets} from "../utils/getAssets";
 
 
 const img = ref('https://s1.ax1x.com/2022/11/17/zeOwZ9.jpg')
 const demoList = ref([
-  {id: 1, name: 'expanding-cards', bgImage: 'expanding-cards.png'},
-  {id: 2, name: 'progress-steps', bgImage: 'progress-steps.png'},
-  {id: 3, name: 'rotating-nav-animation', bgImage: 'rotating-nav-animation.png'},
+  {id: 1, name: 'expanding-cards', bgImage: 'img/expanding-cards.png'},
+  {id: 2, name: 'progress-steps', bgImage: 'img/progress-steps.png'},
+  {id: 3, name: 'rotating-nav-animation', bgImage: 'img/rotating-nav-animation.png'},
   {id: 4, name: 'hidden-search', bgImage: ''},
   {id: 5, name: 'blurry-loading', bgImage: ''},
   {id: 6, name: 'scroll-animation', bgImage: ''},
   {id: 7, name: 'split-landing-page', bgImage: ''},
   {id: 8, name: 'form-input-wave', bgImage: ''},
-  // {id: 9, name: 'sound-board', bgImage: ''},
+  {id: 9, name: 'sound-board', bgImage: ''},
   // {id: 10, name: 'dad-jokes', bgImage: ''},
 ])
-console.log(getAssetsImages('rotating-nav-animation.png'))
+console.log(getAssets('img/expanding-cards.png'))
 </script>
 <template>
   <div id="page" class="page">
@@ -25,7 +25,7 @@ console.log(getAssetsImages('rotating-nav-animation.png'))
         <li v-for="item in demoList" :key="item.id">
           <router-link :to="{name:item.name}" tag="a" target="_blank">
             <div class="bgImage">
-              <img :src="getAssetsImages(item.bgImage) || img" alt=""/>
+              <img :src="getAssets(item.bgImage) || img" alt=""/>
 
               <span class="day">{{ `Day ${item.id}` }}</span>
             </div>
@@ -46,6 +46,7 @@ console.log(getAssetsImages('rotating-nav-animation.png'))
 
 #page {
   display: flex;
+  min-height: 100vh;
   height: 100%;
   width: 100%;
   color: #222222;

@@ -40,6 +40,11 @@ const routes = [
         path: '/form-input-wave',
         component: () => import('../views/form-input-wave/index.vue')
     },
+    {
+        name: 'sound-board',
+        path: '/sound-board',
+        component: () => import('../views/sound-board/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例

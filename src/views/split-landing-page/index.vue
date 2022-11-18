@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import {ref} from "vue";
-import {getAssetsImages} from "../../utils/getAssetsImages";
+import {getAssets} from "../../utils/getAssets";
 
 const isShowLeft = ref<boolean>(false)
 const isShowRight = ref<boolean>(false)
@@ -17,14 +17,14 @@ const handleRight = () => {
 <template>
   <div id="page" class="page">
     <div :class="{'hover-left':isShowLeft,'hover-right':isShowRight}" class="container">
-      <div :style="{backgroundImage:`url(${getAssetsImages('ps5.png')})`}"
+      <div :style="{backgroundImage:`url(${getAssets('img/ps5.png')})`}"
            class="split left"
            @mouseenter="handleLeft"
            @mouseleave="handleLeft">
         <h1>PS 5</h1>
         <a class="btn" href="#">Buy Now</a>
       </div>
-      <div :style="{backgroundImage:`url(${getAssetsImages('xbox.png')})`}"
+      <div :style="{backgroundImage:`url(${getAssets('img/xbox.png')})`}"
            class="split right"
            @mouseenter="handleRight"
            @mouseleave="handleRight">

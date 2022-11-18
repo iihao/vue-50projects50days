@@ -23,14 +23,18 @@ const Password = ref<string>('Password')
           <input required type="text">
           <!--          <label>Email</label>-->
           <label>
-            <span v-for="(item,index) in Email" :style="{transitionDelay: `${index*50}ms`}">{{ item }}</span>
+            <span v-for="(item,index) in Email" :key="index" :style="{transitionDelay: `${index*50}ms`}">{{
+                item
+              }}</span>
           </label>
         </div>
 
         <div class="form-control">
           <input required type="password">
           <label>
-            <span v-for="(item,index) in Password" :style="{transitionDelay: `${index*50}ms`}">{{ item }}</span>
+            <span v-for="(item,index) in Password" :key="index" :style="{transitionDelay: `${index*50}ms`}">{{
+                item
+              }}</span>
           </label>
         </div>
 
