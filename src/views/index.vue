@@ -16,7 +16,7 @@ const demoList = ref([
   {id: 9, name: 'sound-board', bgImage: ''},
   {id: 10, name: 'dad-jokes', bgImage: ''},
   {id: 11, name: 'event-keycodes', bgImage: ''},
-  //{id: 12, name: 'event-keycodes', bgImage: ''},
+  {id: 12, name: 'faq-collapse', bgImage: ''},
   // {id: 13, name: 'event-keycodes', bgImage: ''},
   // {id: 14, name: 'event-keycodes', bgImage: ''},
   // {id: 15, name: 'event-keycodes', bgImage: ''},

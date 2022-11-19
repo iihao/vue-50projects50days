@@ -55,6 +55,11 @@ const routes = [
         path: '/event-keycodes',
         component: () => import('../views/event-keycodes/index.vue')
     },
+    {
+        name: 'faq-collapse',
+        path: '/faq-collapse',
+        component: () => import('../views/faq-collapse/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
