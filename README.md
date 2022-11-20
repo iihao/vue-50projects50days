@@ -12,5 +12,7 @@
 |  8  |        [form-input-wave](https://github.com/iihao/vue-50projects50days/tree/main/src/views/form-input-wave)        |    [Live Demo](https://50project.iihao.top/#/form-input-wave)     |
 |  9  |            [sound-board](https://github.com/iihao/vue-50projects50days/tree/main/src/views/sound-board)            |      [Live Demo](https://50project.iihao.top/#/sound-board)       |
 | 10  |              [dad-jokes](https://github.com/iihao/vue-50projects50days/tree/main/src/views/dad-jokes)              |       [Live Demo](https://50project.iihao.top/#/dad-jokes)        |
+| 11  |         [event-keycodes](https://github.com/iihao/vue-50projects50days/tree/main/src/views/event-keycodes)         |     [Live Demo](https://50project.iihao.top/#/event-keycodes)     |
+| 12  |           [faq-collapse](https://github.com/iihao/vue-50projects50days/tree/main/src/views/faq-collapse)           |      [Live Demo](https://50project.iihao.top/#/faq-collapse)      |
 
 
