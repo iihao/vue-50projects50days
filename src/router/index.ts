@@ -3,13 +3,21 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
 
 const routes = [
-    {name: 'index', path: '/', component: () => import('../views/index.vue')},
+    {
+        name: 'index',
+        path: '/',
+        component: () => import('../views/index.vue')
+    },
     {
         name: 'expanding-cards',
         path: '/expanding-cards',
         component: () => import('../views/expanding-cards/index.vue')
     },
-    {name: 'progress-steps', path: '/progress-steps', component: () => import('../views/progress-steps/index.vue')},
+    {
+        name: 'progress-steps',
+        path: '/progress-steps',
+        component: () => import('../views/progress-steps/index.vue')
+    },
     {
         name: 'rotating-nav-animation',
         path: '/rotating-nav-animation',
@@ -59,6 +67,11 @@ const routes = [
         name: 'faq-collapse',
         path: '/faq-collapse',
         component: () => import('../views/faq-collapse/index.vue')
+    },
+    {
+        name: 'random-choice-picker',
+        path: '/random-choice-picker',
+        component: () => import('../views/random-choice-picker/index.vue')
     },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
