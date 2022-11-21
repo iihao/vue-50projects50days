@@ -22,6 +22,8 @@ const demoList = ref([
   {id: 15, name: 'incrementing-counter', bgImage: ''},
   {id: 16, name: 'drink-water', bgImage: ''},
   {id: 17, name: 'movie-app', bgImage: ''},
+  {id: 18, name: 'background-slider', bgImage: ''},
+  // {id: 19, name: 'movie-app', bgImage: ''},
 
 
 ])
