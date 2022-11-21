@@ -1,8 +1,31 @@
 <script lang="ts" setup>
-import {onMounted, ref} from "vue";
+import {onMounted, ref, watch} from "vue";
 
 const focusTextarea = ref()
-const textarea
+const textarea = ref()
+const tag = ref()
+const randomTag = ref(-1)
+const pickTag = () => {
+  if (tag.value.length)
+    return randomTag.value = Math.floor(Math.random() * tag.value.length)
+}
+const handleEnter = () => {
+  const times = 30
+  const interval = setInterval(() => {
+    pickTag()
+  }, 100)
+  setTimeout(() => {
+    clearInterval(interval)
+    pickTag()
+  }, times * 100)
+}
+
+console.log()
+
+watch(textarea, (val) => {
+  tag.value = val.split(',').map((t: any) => t.trim()).filter((t: string) => t.trim() !== '')
+  console.log(tag.value)
+})
 onMounted(() => {
   focusTextarea.value.focus()
 })
@@ -12,11 +35,16 @@ onMounted(() => {
 <template>
   <div id="page" class="page">
     <div class="container">
-      <h3>Enter all of the choices divided by a comma (','). <br> Press enter when you're done</h3>
+      <h3>Enter all of the choices divided by a comma (','). <br>Press enter when you're done</h3>
       <h3>输入所有选项并用逗号 (',') 分隔。
         完成后按回车</h3>
-      <textarea id="textarea" ref="focusTextarea" placeholder="Enter choices here..."></textarea>
-      <div id="tags"></div>
+      <textarea id="textarea" ref="focusTextarea" v-model="textarea" placeholder="Enter choices here..."
+                @keyup.enter="handleEnter"></textarea>
+      <div id="tags">
+        <span v-for="(item,index) in tag" id="tags" :key="index"
+              :class="{highlight:index === randomTag}"
+              class="tag">{{ item }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -34,10 +62,14 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   /*justify-content: center;*/
-  padding-top: 30vh;
+  padding-top: 20vh;
   height: 100vh;
   overflow: hidden;
   margin: 0;
+}
+
+#tags {
+  text-align: left;
 }
 
 h3 {
