@@ -1,25 +1,43 @@
 <script lang="ts" setup>
+import {onMounted, reactive} from "vue";
 
+interface counterListType {
+  icon: string,
+  counter: number,
+  text: string,
+  target: number
+}
+
+let counterList = reactive<counterListType[]>([
+  {icon: 'icon-tuite', counter: 0, text: 'Twitter Followers', target: 12000},
+  {icon: 'icon-youtube', counter: 0, text: 'YouTube Subscribers', target: 5000},
+  {icon: 'icon-facebook', counter: 0, text: 'Facebook Fans', target: 9800},
+])
+const update = () => {
+  counterList.map((val: counterListType) => {
+    updateCounter(val)
+  })
+}
+const updateCounter = (a: counterListType) => {
+  if (a.counter < a.target) {
+    a.counter += a.target / 200
+    setTimeout(() => updateCounter(a), 1)
+  } else {
+    a.counter = a.target
+  }
+}
+
+onMounted(() => {
+  update()
+})
 </script>
 
 <template>
   <div id="page" class="page">
-    <div class="counter-container">
-      <i class="fab fa-twitter fa-3x"></i>
-      <div class="counter" data-target="12000"></div>
-      <span>Twitter Followers</span>
-    </div>
-
-    <div class="counter-container">
-      <i class="fab fa-youtube fa-3x"></i>
-      <div class="counter" data-target="5000"></div>
-      <span>YouTube Subscribers</span>
-    </div>
-
-    <div class="counter-container">
-      <i class="fab fa-facebook fa-3x"></i>
-      <div class="counter" data-target="7500"></div>
-      <span>Facebook Fans</span>
+    <div v-for="(item,index) in counterList" :key="index" class="counter-container">
+      <i :class="item.icon" class="iconfont"></i>
+      <div class="counter">{{ item.counter }}</div>
+      <span>{{ item.text }}</span>
     </div>
   </div>
 </template>
@@ -31,9 +49,9 @@
 }
 
 #page {
-  background-color: #8e44ad;
+  background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
   color: #fff;
-  font-family: 'Roboto Mono', sans-serif;
+  /*font-family: '思源黑体 ExtraLight', serif;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,8 +69,12 @@
 }
 
 .counter {
-  font-size: 60px;
-  margin-top: 10px;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.iconfont {
+  font-size: 3em;
 }
 
 @media (max-width: 580px) {
