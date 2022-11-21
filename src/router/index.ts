@@ -88,6 +88,11 @@ const routes = [
         path: '/drink-water',
         component: () => import('../views/drink-water/index.vue')
     },
+    {
+        name: 'movie-app',
+        path: '/movie-app',
+        component: () => import('../views/movie-app/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
