@@ -73,6 +73,11 @@ const routes = [
         path: '/random-choice-picker',
         component: () => import('../views/random-choice-picker/index.vue')
     },
+    {
+        name: 'animated-navigation',
+        path: '/animated-navigation',
+        component: () => import('../views/animated-navigation/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
