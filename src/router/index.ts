@@ -78,6 +78,11 @@ const routes = [
         path: '/animated-navigation',
         component: () => import('../views/animated-navigation/index.vue')
     },
+    {
+        name: 'incrementing-counter',
+        path: '/incrementing-counter',
+        component: () => import('../views/incrementing-counter/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
