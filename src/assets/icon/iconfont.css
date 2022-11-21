@@ -1,20 +1,47 @@
 @font-face {
     font-family: "iconfont"; /* Project id 3774658 */
-    src: url('//at.alicdn.com/t/c/font_3774658_1ieqze5wo99.woff2?t=1668872480910') format('woff2'),
-    url('//at.alicdn.com/t/c/font_3774658_1ieqze5wo99.woff?t=1668872480910') format('woff'),
-    url('//at.alicdn.com/t/c/font_3774658_1ieqze5wo99.ttf?t=1668872480910') format('truetype');
+    src: url('//at.alicdn.com/t/c/font_3774658_jcv42yihqmi.woff2?t=1669012184670') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3774658_jcv42yihqmi.woff?t=1669012184670') format('woff'),
+    url('//at.alicdn.com/t/c/font_3774658_jcv42yihqmi.ttf?t=1669012184670') format('truetype');
+}
+
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: "思源黑体 ExtraLight";
+    font-weight: 250;
+    src: url("//at.alicdn.com/wf/webfont/9Ul8IfbXtjvJ/Z5ZMrb3duihXh2ur2FZOO.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/9Ul8IfbXtjvJ/eOMHDFeR7GHu7MojVATIq.woff") format("woff");
+    font-display: swap;
 }
 
 
 .iconfont {
     font-family: "iconfont" !important;
-    font-size: 30px;
-    line-height: 30px;
-    display: flex;
-    justify-content: center;
+    font-size: 16px;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-youtube:before {
+    content: "\e711";
+}
+
+.icon-tuite:before {
+    content: "\e652";
+}
+
+.icon-facebook:before {
+    content: "\e621";
+}
+
+.icon-hipchat:before {
+    content: "\e675";
+}
+
+.icon-chat--line:before {
+    content: "\e632";
 }
 
 .icon-guanbi1:before {
