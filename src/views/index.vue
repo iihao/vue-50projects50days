@@ -24,7 +24,7 @@ const demoList = ref([
   {id: 17, name: 'movie-app', bgImage: ''},
   {id: 18, name: 'background-slider', bgImage: ''},
   {id: 19, name: 'theme-clock', bgImage: ''},
-
+  {id: 20, name: 'button-ripple-effect', bgImage: ''},
 
 ])
 console.log(getAssets('img/expanding-cards.png'))

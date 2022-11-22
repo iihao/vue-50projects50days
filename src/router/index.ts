@@ -103,6 +103,11 @@ const routes = [
         path: '/theme-clock',
         component: () => import('../views/theme-clock/index.vue')
     },
+    {
+        name: 'button-ripple-effect',
+        path: '/button-ripple-effect',
+        component: () => import('../views/button-ripple-effect/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
