@@ -98,6 +98,11 @@ const routes = [
         path: '/background-slider',
         component: () => import('../views/background-slider/index.vue')
     },
+    {
+        name: 'theme-clock',
+        path: '/theme-clock',
+        component: () => import('../views/theme-clock/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
