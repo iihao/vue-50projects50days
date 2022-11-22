@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import {onMounted, ref} from "vue";
+import {onMounted, reactive, ref} from "vue";
 
 const smallCups = ref<number>(8)
 const currentCup = ref(0)
-const percentStyle = ref({visibility: '', height: '0'})
-const remainedStyle = ref({visibility: '', height: '0'})
+const percentStyle = reactive({visibility: 'none', height: 'none'})
+const remainedStyle = reactive({visibility: 'none', height: 'none'})
 const smallCupClick = (val: number) => {
   console.log('clickNum', val)
   console.log('currentCup', currentCup.value)
@@ -18,17 +18,17 @@ const smallCupClick = (val: number) => {
 
 const updateBigCup = () => {
   if (currentCup.value === 0) {
-    percentStyle.value.visibility = 'hidden'
-    percentStyle.value.height = '0'
+    percentStyle.visibility = 'hidden'
+    percentStyle.height = '0'
   } else {
-    percentStyle.value.visibility = 'visible'
-    percentStyle.value.height = `${currentCup.value / smallCups.value * 330}px`
+    percentStyle.visibility = 'visible'
+    percentStyle.height = `${currentCup.value / smallCups.value * 330}px`
   }
   if (currentCup.value === smallCups.value) {
-    remainedStyle.value.visibility = 'hidden'
-    remainedStyle.value.height = '0'
+    remainedStyle.visibility = 'hidden'
+    remainedStyle.height = '0'
   } else {
-    remainedStyle.value.visibility = 'visible'
+    remainedStyle.visibility = 'visible'
   }
 }
 onMounted(() => updateBigCup())
