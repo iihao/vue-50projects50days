@@ -108,6 +108,11 @@ const routes = [
         path: '/button-ripple-effect',
         component: () => import('../views/button-ripple-effect/index.vue')
     },
+    {
+        name: 'drag-n-drop',
+        path: '/drag-n-drop',
+        component: () => import('../views/drag-n-drop/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
