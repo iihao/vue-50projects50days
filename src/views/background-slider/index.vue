@@ -39,11 +39,11 @@ const rightClick = () => {
         " class="slide "
       ></div>
       <button id="left" class="arrow left-arrow" @click="leftClick()">
-        <i class="fas fa-arrow-left"></i>
+        <i class="iconfont icon-9"></i>
       </button>
 
       <button id="right" class="arrow right-arrow" @click="rightClick()">
-        <i class="fas fa-arrow-right"></i>
+        <i class="iconfont icon-10"></i>
       </button>
     </div>
   </div>
@@ -82,6 +82,11 @@ const rightClick = () => {
   transition: all 0.8s ease-in-out;
 }
 
+.iconfont {
+  font-size: 3rem;
+  color: #ffffff65;
+}
+
 .slider-container {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   height: 70vh;
@@ -111,13 +116,19 @@ const rightClick = () => {
 .arrow {
   position: fixed;
   background-color: transparent;
-  color: #fff;
-  padding: 20px;
+  /*color: #fff;*/
+  padding: 5px;
   font-size: 30px;
-  border: 2px solid orange;
+  /*border: 2px solid orange;*/
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+}
+
+.arrow:hover {
+  background: #2B2B2B;
+  border-radius: 12px;
+  border: 0
 }
 
 .arrow:focus {

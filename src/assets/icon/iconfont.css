@@ -1,18 +1,8 @@
 @font-face {
     font-family: "iconfont"; /* Project id 3774658 */
-    src: url('//at.alicdn.com/t/c/font_3774658_jcv42yihqmi.woff2?t=1669012184670') format('woff2'),
-    url('//at.alicdn.com/t/c/font_3774658_jcv42yihqmi.woff?t=1669012184670') format('woff'),
-    url('//at.alicdn.com/t/c/font_3774658_jcv42yihqmi.ttf?t=1669012184670') format('truetype');
-}
-
-
-/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
-@font-face {
-    font-family: "思源黑体 ExtraLight";
-    font-weight: 250;
-    src: url("//at.alicdn.com/wf/webfont/9Ul8IfbXtjvJ/Z5ZMrb3duihXh2ur2FZOO.woff2") format("woff2"),
-    url("//at.alicdn.com/wf/webfont/9Ul8IfbXtjvJ/eOMHDFeR7GHu7MojVATIq.woff") format("woff");
-    font-display: swap;
+    src: url('//at.alicdn.com/t/c/font_3774658_qodpsfe9kbm.woff2?t=1669080258463') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3774658_qodpsfe9kbm.woff?t=1669080258463') format('woff'),
+    url('//at.alicdn.com/t/c/font_3774658_qodpsfe9kbm.ttf?t=1669080258463') format('truetype');
 }
 
 
@@ -22,6 +12,26 @@
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-5:before {
+    content: "\e604";
+}
+
+.icon-7:before {
+    content: "\e606";
+}
+
+.icon-8:before {
+    content: "\e607";
+}
+
+.icon-9:before {
+    content: "\e608";
+}
+
+.icon-10:before {
+    content: "\e609";
 }
 
 .icon-youtube:before {
