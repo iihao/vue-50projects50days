@@ -1,18 +1,18 @@
 <script lang="ts" setup>
 import {onMounted, ref} from "vue";
 
-interface movieList {
-  title: string
-  id: number
-  vote_average: string
-  overview: string
-  poster_path: string
+interface MovieProps {
+  id: string;
+  title: string;
+  vote_average: number;
+  overview: string;
+  poster_path: string;
 }
 
 const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=10'
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="'
-const moviesData = ref<movieList>()
+const moviesData = ref<Array<MovieProps>>()
 const searchInput = ref<string>('')
 const getMovies = async (url: string) => {
   const res = await fetch(url)

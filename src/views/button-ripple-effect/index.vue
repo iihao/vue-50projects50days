@@ -1,9 +1,16 @@
 <script lang="ts" setup>
-import {ref} from "vue";
+import {reactive, ref} from "vue";
 
 const circle = ref<boolean>()
 const isShow = ref<boolean>(true)
-const circleStyle = ref<object>({})
+
+interface StyleValue {
+  top: string
+  left: string
+}
+
+const item: StyleValue | undefined = {top: '', left: ''}
+let circleStyle = reactive(item)
 const handleClick = (e: any) => {
   circle.value = true
   const x = e.pageX
@@ -12,8 +19,13 @@ const handleClick = (e: any) => {
   const buttonLeft = e.target.offsetLeft
   const xInside = x - buttonLeft
   const yInside = y - buttonTop
-  circleStyle.value = {top: yInside + 'px', left: xInside + 'px'}
-  console.log(x, y, 'bth(', buttonTop, buttonLeft, ')')
+  circleStyle = {top: yInside + 'px', left: xInside + 'px'}
+  console.log(x,
+      y,
+      'bth(',
+      buttonTop,
+      buttonLeft,
+      ')')
   isShow.value = true
   setTimeout(() => isShow.value = false, 300)
 }

@@ -1,10 +1,16 @@
 <script lang="ts" setup>
 import {onMounted, reactive, ref} from "vue";
 
+interface StyleProps {
+  visibility: any
+  height: any
+}
+
 const smallCups = ref<number>(8)
-const currentCup = ref(0)
-const percentStyle = reactive({visibility: 'none', height: '0px'})
-const remainedStyle = reactive({visibility: 'none', height: '0px'})
+const currentCup = ref<number>(0)
+const item: StyleProps = {visibility: '', height: ''}
+let percentStyle = reactive(item)
+let remainedStyle = reactive(item)
 const smallCupClick = (val: number) => {
   console.log('clickNum', val)
   console.log('currentCup', currentCup.value)
@@ -17,21 +23,22 @@ const smallCupClick = (val: number) => {
 }
 
 const updateBigCup = () => {
+  console.log(currentCup.value)
   if (currentCup.value === 0) {
-    percentStyle.visibility = 'hidden'
-    percentStyle.height = '0px'
+    percentStyle = {visibility: 'hidden', height: '0px'}
   } else {
-    percentStyle.visibility = 'visible'
-    percentStyle.height = `${currentCup.value / smallCups.value * 330}px`
+    percentStyle = {visibility: 'visible', height: `${currentCup.value / smallCups.value * 330}px`}
   }
   if (currentCup.value === smallCups.value) {
-    remainedStyle.visibility = 'hidden'
-    remainedStyle.height = '0px'
+    remainedStyle = {visibility: 'hidden', height: '0px'}
   } else {
-    remainedStyle.visibility = 'visible'
+    remainedStyle = {visibility: 'visible', height: '0px'}
   }
 }
-onMounted(() => updateBigCup())
+updateBigCup()
+onMounted(() => {
+  updateBigCup()
+})
 </script>
 <template>
   <div id="page" class="page">
