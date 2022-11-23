@@ -113,6 +113,11 @@ const routes = [
         path: '/drag-n-drop',
         component: () => import('../views/drag-n-drop/index.vue')
     },
+    {
+        name: 'drawing-app',
+        path: '/drawing-app',
+        component: () => import('../views/drawing-app/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例

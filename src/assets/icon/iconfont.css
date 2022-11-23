@@ -1,10 +1,9 @@
 @font-face {
     font-family: "iconfont"; /* Project id 3774658 */
-    src: url('//at.alicdn.com/t/c/font_3774658_qodpsfe9kbm.woff2?t=1669080258463') format('woff2'),
-    url('//at.alicdn.com/t/c/font_3774658_qodpsfe9kbm.woff?t=1669080258463') format('woff'),
-    url('//at.alicdn.com/t/c/font_3774658_qodpsfe9kbm.ttf?t=1669080258463') format('truetype');
+    src: url('//at.alicdn.com/t/c/font_3774658_aqitmaw8lab.woff2?t=1669189744760') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3774658_aqitmaw8lab.woff?t=1669189744760') format('woff'),
+    url('//at.alicdn.com/t/c/font_3774658_aqitmaw8lab.ttf?t=1669189744760') format('truetype');
 }
-
 
 .iconfont {
     font-family: "iconfont" !important;
@@ -12,6 +11,26 @@
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-save:before {
+    content: "\e603";
+}
+
+.icon-jian:before {
+    content: "\e600";
+}
+
+.icon-jia:before {
+    content: "\e601";
+}
+
+.icon-jia1:before {
+    content: "\e602";
+}
+
+.icon-xiangpica:before {
+    content: "\e638";
 }
 
 .icon-5:before {
