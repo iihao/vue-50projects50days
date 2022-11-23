@@ -118,6 +118,11 @@ const routes = [
         path: '/drawing-app',
         component: () => import('../views/drawing-app/index.vue')
     },
+    {
+        name: 'kinetic-loader',
+        path: '/kinetic-loader',
+        component: () => import('../views/kinetic-loader/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
