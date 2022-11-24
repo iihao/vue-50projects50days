@@ -123,6 +123,11 @@ const routes = [
         path: '/kinetic-loader',
         component: () => import('../views/kinetic-loader/index.vue')
     },
+    {
+        name: 'content-placeholder',
+        path: '/content-placeholder',
+        component: () => import('../views/content-placeholder/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
