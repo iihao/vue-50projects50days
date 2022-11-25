@@ -9,7 +9,7 @@ interface slideProps {
 
 const sliderRef = ref()
 const activeSlideIndex = ref<number>(0)
-const sliderHeight = ref<number>()
+const sliderHeight = ref<number>(0)
 const sliderTop = ref<string>()
 const item: Array<slideProps> = [{title: 'Nature flower', content: 'all in pink', color: '#FD3555'},
   {title: 'Blue Sky', content: 'with it\'s mountains', color: '#2A86BA'},
