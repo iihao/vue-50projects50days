@@ -29,8 +29,8 @@ const demoList = ref([
   {id: 22, name: 'drawing-app', bgImage: ''},
   {id: 23, name: 'kinetic-loader', bgImage: ''},
   {id: 24, name: 'content-placeholder', bgImage: ''},
-  {id: 25, name: 'sticky-navigation', bgImage: ''}
-  // {id: 23, name: 'kinetic-loader', bgImage: ''}
+  {id: 25, name: 'sticky-navigation', bgImage: ''},
+  {id: 26, name: 'double-vertical-slider', bgImage: ''}
   // {id: 23, name: 'kinetic-loader', bgImage: ''}
 
 ])
