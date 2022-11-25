@@ -2,7 +2,7 @@
 import {onMounted, ref} from "vue";
 
 const isLoading = ref<boolean>(true)
-const dataList = ref({})
+const dataList = ref<any>({})
 const getData = () => {
   dataList.value = {
     bgImage: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80',
