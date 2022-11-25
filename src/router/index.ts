@@ -128,6 +128,11 @@ const routes = [
         path: '/content-placeholder',
         component: () => import('../views/content-placeholder/index.vue')
     },
+    {
+        name: 'sticky-navigation',
+        path: '/sticky-navigation',
+        component: () => import('../views/sticky-navigation/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例

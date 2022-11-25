@@ -1,28 +1,47 @@
 <script lang="ts" setup>
+import {onMounted, ref} from "vue";
 
+const isLoading = ref<boolean>(true)
+const dataList = ref({})
+const getData = () => {
+  dataList.value = {
+    bgImage: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80',
+    title: 'Lorem ipsum dolor sit amet',
+    excerpt: ['Lorem ipsum dolor sit amet ', 'consecrate radicalising elite ', 'Dolores dispenser'],
+    profile: 'https://randomuser.me/api/portraits/men/45.jpg',
+    name: 'John Doe',
+    date: '2022-11-01'
+  }
+  isLoading.value = false
+}
+onMounted(() => {
+  setTimeout(() => getData(), 2000)
+})
 </script>
 <template>
   <div id="page" class="page">
     <div class="card">
-      <div id="header" class="card-header animated-bg">&nbsp;</div>
-
+      <div id="header" :class="{'animated-bg':isLoading}" class="card-header ">
+        <img v-show="!isLoading" :src="dataList.bgImage" alt="bg"/>
+      </div>
       <div class="card-content">
-        <h3 id="title" class="card-title animated-bg animated-bg-text">
-          &nbsp;
+        <h3 id="title" :class="{'animated-bg animated-bg-text':isLoading}" class="card-title">
+          {{ dataList.title }}
         </h3>
         <p id="excerpt" class="card-excerpt">
-          &nbsp;
-          <span class="animated-bg animated-bg-text">&nbsp;</span>
-          <span class="animated-bg animated-bg-text">&nbsp;</span>
-          <span class="animated-bg animated-bg-text">&nbsp;</span>
+          <span v-for="(item,index) in dataList.excerpt" :key="index"
+                :class="{'animated-bg animated-bg-text':isLoading}">{{ item }}</span>
+
         </p>
         <div class="author">
-          <div id="profile_img" class="profile-img animated-bg">&nbsp;</div>
+          <div id="profile_img" class="profile-img animated-bg">
+            <img v-show="!isLoading" :src="dataList.profile" alt="author"/>
+          </div>
           <div class="author-info">
-            <strong id="name" class="animated-bg animated-bg-text"
-            >&nbsp;</strong
+            <strong id="name" :class="{'animated-bg animated-bg-text':isLoading}"
+            >{{ dataList.name }}</strong
             >
-            <small id="date" class="animated-bg animated-bg-text">&nbsp;</small>
+            <small id="date" :class="{'animated-bg animated-bg-text':isLoading}">{{ dataList.date }}</small>
           </div>
         </div>
       </div>
@@ -40,6 +59,7 @@
   font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
+  text-align: left;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
@@ -54,7 +74,7 @@ img {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
-  width: 350px;
+  width: 400px;
 }
 
 .card-header {
@@ -103,7 +123,7 @@ img {
 
 .author-info small {
   color: #aaa;
-  margin-top: 5px;
+  margin-top: 1px;
 }
 
 .animated-bg {
