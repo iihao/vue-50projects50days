@@ -138,6 +138,11 @@ const routes = [
         path: '/double-vertical-slider',
         component: () => import('../views/double-vertical-slider/index.vue')
     },
+    {
+        name: 'toast-notification',
+        path: '/toast-notification',
+        component: () => import('../views/toast-notification/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
