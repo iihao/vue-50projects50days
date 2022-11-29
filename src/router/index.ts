@@ -148,6 +148,11 @@ const routes = [
         path: '/github-profiles',
         component: () => import('../views/github-profiles/index.vue')
     },
+    {
+        name: 'double-click-heart',
+        path: '/double-click-heart',
+        component: () => import('../views/double-click-heart/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
