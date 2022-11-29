@@ -82,7 +82,7 @@ watch(inputText, (val) => {
 }
 
 #page {
-  background-color: #2a2a72;
+  background-image: linear-gradient(0deg, #a3bded 0%, #6991c7 100%);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -103,14 +103,15 @@ watch(inputText, (val) => {
 .user-form input {
   width: 100%;
   display: block;
-  background-color: #4c2885;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
   border: none;
   border-radius: 10px;
   color: #fff;
   padding: 1rem;
   margin-bottom: 2rem;
   font-family: inherit;
-  font-size: 1rem;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
   0 15px 40px rgba(0, 0, 0, 0.1);
 }
@@ -127,7 +128,7 @@ watch(inputText, (val) => {
   white-space: pre-wrap;
   font-size: 22px;
   max-width: 800px;
-  background-color: #4c2885;
+  background-image: linear-gradient(0deg, #016c73 0%, #1092b0 47%, #03487a 100%);
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
   0 15px 40px rgba(0, 0, 0, 0.1);
