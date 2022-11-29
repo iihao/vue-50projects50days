@@ -143,6 +143,11 @@ const routes = [
         path: '/toast-notification',
         component: () => import('../views/toast-notification/index.vue')
     },
+    {
+        name: 'github-profiles',
+        path: '/github-profiles',
+        component: () => import('../views/github-profiles/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例

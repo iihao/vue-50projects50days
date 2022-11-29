@@ -44,7 +44,7 @@ const handleClick = () => {
 }
 
 #page {
-  background-color: rebeccapurple;
+  background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
   font-family: 'Poppins', sans-serif;
   display: flex;
   font-size: 16px;
