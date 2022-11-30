@@ -153,6 +153,16 @@ const routes = [
         path: '/double-click-heart',
         component: () => import('../views/double-click-heart/index.vue')
     },
+    {
+        name: 'auto-text-effect',
+        path: '/auto-text-effect',
+        component: () => import('../views/auto-text-effect/index.vue')
+    },
+    {
+        name: 'password-generator',
+        path: '/password-generator',
+        component: () => import('../views/password-generator/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例

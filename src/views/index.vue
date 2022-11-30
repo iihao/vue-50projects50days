@@ -34,6 +34,8 @@ const demoList = ref([
   {id: 27, name: 'toast-notification', bgImage: ''},
   {id: 28, name: 'github-profiles', bgImage: ''},
   {id: 29, name: 'double-click-heart', bgImage: ''},
+  {id: 30, name: 'auto-text-effect', bgImage: ''},
+  {id: 31, name: 'password-generator', bgImage: ''},
 ])
 console.log(getAssets('img/expanding-cards.png'))
 </script>
