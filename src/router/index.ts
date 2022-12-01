@@ -163,6 +163,11 @@ const routes = [
         path: '/password-generator',
         component: () => import('../views/password-generator/index.vue')
     },
+    {
+        name: 'good-cheap-fast',
+        path: '/good-cheap-fast',
+        component: () => import('../views/good-cheap-fast/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
