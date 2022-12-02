@@ -168,6 +168,11 @@ const routes = [
         path: '/good-cheap-fast',
         component: () => import('../views/good-cheap-fast/index.vue')
     },
+    {
+        name: 'notes-app',
+        path: '/notes-app',
+        component: () => import('../views/notes-app/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
