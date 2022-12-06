@@ -173,6 +173,11 @@ const routes = [
         path: '/notes-app',
         component: () => import('../views/notes-app/index.vue')
     },
+    {
+        name: 'animated-countdown',
+        path: '/animated-countdown',
+        component: () => import('../views/animated-countdown/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
