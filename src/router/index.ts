@@ -178,6 +178,16 @@ const routes = [
         path: '/animated-countdown',
         component: () => import('../views/animated-countdown/index.vue')
     },
+    {
+        name: 'image-carousel',
+        path: '/image-carousel',
+        component: () => import('../views/image-carousel/index.vue')
+    },
+    {
+        name: 'hoverboard',
+        path: '/hoverboard',
+        component: () => import('../views/hoverboard/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
