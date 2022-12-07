@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-
+const sss = '2'
 </script>
 
 <template>
