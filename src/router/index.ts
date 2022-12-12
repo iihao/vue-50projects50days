@@ -188,6 +188,11 @@ const routes = [
         path: '/hoverboard',
         component: () => import('../views/hoverboard/index.vue')
     },
+    {
+        name: 'pokedex',
+        path: '/pokedex',
+        component: () => import('../views/pokedex/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
