@@ -2,7 +2,7 @@
 import {onMounted, ref, watch} from "vue";
 import axios from "axios";
 
-const pokemon_count = ref<number>(20)
+const pokemon_count = ref<number>(120)
 const colors = ref<any>({
   fire: '#FDDFDF',
   grass: '#DEFDE0',
@@ -44,14 +44,15 @@ watch(dataList.value, (val) => {
   <div id="page" class="page">
     <h1>Pokedex</h1>
     <div id="poke-container" class="poke-container">
-      <div v-for="(item,index) in dataList" :key="index" class="pokemon">
+      <div v-for="(item,index) in dataList" :key="index" :style="{backgroundColor:colors[item.types[0].type.name ]}"
+           class="pokemon">
         <div class="img-container">
-          <img alt="" src="">
+          <img :alt="item.name" :src="item['sprites']['front_default']">
         </div>
         <div class="info">
-          <span class="number">{{ item.id.toString().padStart(3, '0') }}</span>
+          <span class="number" style="font-weight: bold;">#{{ item.id.toString().padStart(3, '0') }}</span>
           <h3 class="name">{{ item.name[0].toUpperCase() + item.name.slice(1) }}</h3>
-          <small class="type">Type: <span>{{  }}</span> </small>
+          <small class="type">Type: <span>{{ item.types[0].type.name }}</span> </small>
         </div>
       </div>
     </div>
@@ -66,8 +67,8 @@ watch(dataList.value, (val) => {
 }
 
 #page {
-  background: #efefbb;
-  background: linear-gradient(to right, #d4d3dd, #efefbb);
+  /*background: #efefbb;*/
+  background-image: linear-gradient(0deg, #fddb92 0%, #d1fdff 100%);
   font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
