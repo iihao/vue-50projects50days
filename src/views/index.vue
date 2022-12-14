@@ -41,7 +41,8 @@ const demoList = ref([
   {id: 34, name: 'animated-countdown', bgImage: ''},
   {id: 35, name: 'image-carousel', bgImage: ''},
   {id: 36, name: 'hoverboard', bgImage: ''},
-  {id: 36, name: 'pokedex', bgImage: ''},
+  {id: 37, name: 'pokedex', bgImage: ''},
+  {id: 38, name: 'mobile-tab-navigation', bgImage: ''},
 ])
 console.log(getAssets('img/expanding-cards.png'))
 </script>

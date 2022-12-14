@@ -193,6 +193,11 @@ const routes = [
         path: '/pokedex',
         component: () => import('../views/pokedex/index.vue')
     },
+    {
+        name: 'mobile-tab-navigation',
+        path: '/mobile-tab-navigation',
+        component: () => import('../views/mobile-tab-navigation/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
