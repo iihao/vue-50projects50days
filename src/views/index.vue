@@ -3,7 +3,7 @@ import {ref} from "vue";
 import {getAssets} from "../utils/getAssets";
 
 
-const img = ref('https://s1.ax1x.com/2022/11/17/zeOwZ9.jpg')
+const img = ref(getAssets('img/tab1.jpg'))
 const demoList = ref([
   {id: 1, name: 'expanding-cards', bgImage: 'img/expanding-cards.png'},
   {id: 2, name: 'progress-steps', bgImage: 'img/progress-steps.png'},
