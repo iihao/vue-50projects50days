@@ -3,7 +3,7 @@ import {ref} from "vue";
 import {getAssets} from "../utils/getAssets";
 
 
-const img = ref(getAssets('img/tab1.jpg'))
+const img = getAssets('img/tab1.jpg')
 const demoList = ref([
   {id: 1, name: 'expanding-cards', bgImage: 'img/expanding-cards.png'},
   {id: 2, name: 'progress-steps', bgImage: 'img/progress-steps.png'},
@@ -43,6 +43,7 @@ const demoList = ref([
   {id: 36, name: 'hoverboard', bgImage: ''},
   {id: 37, name: 'pokedex', bgImage: ''},
   {id: 38, name: 'mobile-tab-navigation', bgImage: ''},
+  {id: 39, name: 'password-strength-background', bgImage: ''},
 ])
 console.log(getAssets('img/expanding-cards.png'))
 </script>

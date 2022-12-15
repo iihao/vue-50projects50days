@@ -72,6 +72,7 @@ watch(dataList.value, (val) => {
   font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   margin: 0;

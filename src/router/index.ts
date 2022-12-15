@@ -198,6 +198,11 @@ const routes = [
         path: '/mobile-tab-navigation',
         component: () => import('../views/mobile-tab-navigation/index.vue')
     },
+    {
+        name: 'password-strength-background',
+        path: '/password-strength-background',
+        component: () => import('../views/password-strength-background/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
