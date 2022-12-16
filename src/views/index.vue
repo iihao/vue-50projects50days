@@ -43,7 +43,8 @@ const demoList = ref([
   {id: 37, name: 'pokedex', bgImage: ''},
   {id: 38, name: 'mobile-tab-navigation', bgImage: ''},
   {id: 39, name: 'password-strength-background', bgImage: ''},
-  {id: 39, name: '3d-background-boxes', bgImage: ''},
+  {id: 40, name: '3d-background-boxes', bgImage: ''},
+  {id: 41, name: 'verify-account-ui', bgImage: ''},
 
 ])
 console.log(getAssets('img/expanding-cards.png'))

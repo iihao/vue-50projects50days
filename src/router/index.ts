@@ -208,6 +208,11 @@ const routes = [
         path: '/3d-background-boxes',
         component: () => import('../views/3d-background-boxes/index.vue')
     },
+    {
+        name: 'verify-account-ui',
+        path: '/verify-account-ui',
+        component: () => import('../views/verify-account-ui/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
