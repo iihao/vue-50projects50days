@@ -2,8 +2,7 @@
 import {ref} from "vue";
 import {getAssets} from "../utils/getAssets";
 
-
-const img = getAssets('img/tab1.jpg')
+const img = ref<any>(getAssets('img/tab1.jpg'))
 const demoList = ref([
   {id: 1, name: 'expanding-cards', bgImage: 'img/expanding-cards.png'},
   {id: 2, name: 'progress-steps', bgImage: 'img/progress-steps.png'},
