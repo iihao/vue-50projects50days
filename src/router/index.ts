@@ -203,6 +203,11 @@ const routes = [
         path: '/password-strength-background',
         component: () => import('../views/password-strength-background/index.vue')
     },
+    {
+        name: '3d-background-boxes',
+        path: '/3d-background-boxes',
+        component: () => import('../views/3d-background-boxes/index.vue')
+    },
     //{ name: '关于', path: '/about', component: () => import('../pages/About.vue')}
 ]
 // 创建路由实例
